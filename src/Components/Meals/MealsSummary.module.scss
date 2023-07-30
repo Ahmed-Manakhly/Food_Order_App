@@ -1,0 +1,107 @@
+.summary {
+    text-align: center;
+    max-width: 45rem;
+    width: 75%;
+    margin: auto;
+    margin-top: -10rem;
+    position: relative;
+    background-color: #383838;
+    color: white;
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 2px 18px 7px rgba(255 255 255 /0.25);
+    h2 {
+        font-size: 2rem;
+        margin: 0;
+    }
+    p {
+        margin: 2px;
+    }
+}
+
+
+
+.menus {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .before {
+        // width: 60px;
+        // height: 30px;
+        // background-color: #383838;
+        position: absolute;
+        top: 50%;
+        @extend %mid ;
+        left : -120px;
+        cursor: pointer;
+        text-align: center;
+        @media (max-width: 768px) {
+            left : -50px;
+        }
+    }
+    .after {
+
+        position: absolute;
+        top: 50%;
+        @extend %mid ;
+        right : -120px;
+        cursor: pointer;
+        text-align: center;
+        @media (max-width: 768px) {
+            right : -50px;
+        }
+
+    }
+    .menue {
+        overflow: hidden;
+        @extend %trans ;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        h2 {
+            margin: 5px;
+            width: 100%;
+            @extend %trans ;
+        }
+        img {
+            border: 7px solid #eee;
+            box-shadow: 0 2px 18px 7px rgba(255 255 255 /0.25);
+            @extend%round;
+            width: 88%;
+            height: 300px;
+            @extend%trans;
+
+}
+    }
+}
+
+%mid {
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+%round {
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+}
+
+%trans {
+    transition: 0.33s;
+    -webkit-transition: 0.33s;
+    -moz-transition: 0.33s;
+    -ms-transition: 0.33s;
+    -o-transition: 0.33s;
+}
+
+
+
